@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sobremesas - Hamburgueria</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJNKKWVK');
+    </script>
+
+
+</head>
+
+<body bgcolor="#FF6000">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="fotos.html">Galeria</a></li>
+            <li><a href="links.html">Links Externos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="promocoes.html">Promoções</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="sobremesas.html">Sobremesas</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Sobremesas</h1>
+    <div class="galeria">
+        <div class="lanche">
+            <h2>Pudim</h2>
+            <img src="imagem/pudin.jpeg" alt="Pudim">
+            <p class="preco">R$ 8,00</p>
+            <label><input type="checkbox" value="pudim"> Selecionar</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Mousse de Chocolate</h2>
+            <img src="imagem/mousse.jpeg" alt="Mousse de Chocolate">
+            <p class="preco">R$ 9,00</p>
+            <label><input type="checkbox" value="mousse"> Selecionar</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Sorvete</h2>
+            <img src="imagem/sorvete de cone.jpeg" alt="Sorvete">
+            <p class="preco">R$ 7,00</p>
+            <label><input type="checkbox" value="sorvete_chocolate"> Chocolate</label>
+            <label><input type="checkbox" value="sorvete_morango"> Morango</label>
+        </div>
+
+
+        <footer>
+
+            <button class="finalizar" onclick="finalizarSobremesa()">Finalizar Pedido</button>
+        </footer>
+
+        <script>
+            function finalizarSobremesa() {
+                let selecionados = [];
+                document.querySelectorAll('input[type="checkbox"]:checked').forEach(item => {
+                    selecionados.push(item.value);
+                });
+
+                window.location.href = "pedidos.html?sobremesas=" + encodeURIComponent(selecionados.join(", "));
+            }
+        </script>
+
+</body>
+
+</html>

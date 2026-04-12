@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cardapio - Hamburueria</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJNKKWVK');
+    </script>
+
+
+
+</head>
+
+<body bgcolor="#FF6000">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="fotos.html">Galeria</a></li>
+            <li><a href="links.html">Links Externos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="promocoes.html">Promoções</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="sobremesas.html">Sobremesas</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <h1>Lanches ARTESANAIS</h1>
+    <h1> Bem vindo ao nosso Cardapio</h1>
+    <img src="imagem/capa.png" width="300" height="250" alt="Capa do cardapio">
+    <p>Lanches do cardapio 01</p>
+    <h2>lanche 1</h2>
+
+    <div class="galeria">
+        <div class="lanche">
+            <h2>X-Bacon</h2>
+            <img src="imagem/xbacon.jpeg" alt="X-Bacon">
+            <p class="preco">R$ 15,00</p>
+            <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon extra</p>
+            <label><input type="checkbox" value="tradicional"> Tradicional</label>
+            <label><input type="checkbox" value="duplo"> Duplo</label>
+        </div>
+
+        <div class="lanche">
+            <h2>X-Frango</h2>
+            <img src="imagem/xfrango.jpeg" alt="X-Frango">
+            <p class="preco">R$ 12,00</p>
+            <p>Ingredientes: pão, frango, queijo, alface, tomate</p>
+            <label><input type="checkbox" value="tradicional"> Tradicional</label>
+            <label><input type="checkbox" value="duplo"> Duplo</label>
+        </div>
+    </div>
+
+    <br>
+    <div class="galeria">
+        <div class="lanche">
+            <h2>X-TUDO</h2>
+            <img src="imagem/xtudo.jpeg" alt="X-TUDO">
+            <p class="preco">R$ 15,00</p>
+            <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon extra,ovo, salsicha</p>
+            <label><input type="checkbox" value="tradicional"> Tradicional</label>
+            <label><input type="checkbox" value="duplo"> Duplo</label>
+        </div>
+
+        <div class="lanche">
+            <h2>crispy com queijo</h2>
+            <img src="imagem/crispy.jpeg" alt="Crispy">
+            <p class="preco">R$ 12,00</p>
+            <p>Ingredientes: pão, frango, queijo, alface,cebola crispy, rodela de cebola roxa e queijo cheddar</p>
+            <label><input type="checkbox" value="tradicional"> Tradicional</label>
+            <label><input type="checkbox" value="duplo"> Duplo</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Coca-Cola Lata</h2>
+            <img src="imagem/cocalata.jpeg" alt="Coca-Cola Lata">
+            <p class="preco">R$ 6,00</p>
+            <label><input type="checkbox" value="coca_lata_normal"> Normal</label>
+            <label><input type="checkbox" value="coca_lata_zero"> Zero</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Coca-Cola Garrafa</h2>
+            <img src="imagem/coca.jpeg" alt="Coca-Cola Garrafa">
+            <p class="preco">R$ 8,00</p>
+            <label><input type="checkbox" value="coca_garrafa_normal"> Normal</label>
+            <label><input type="checkbox" value="coca_garrafa_zero"> Zero</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Cerveja</h2>
+            <img src="imagem/cerveja.jpeg" alt="Cerveja">
+            <img src="imagem/cerveja2.jpeg" alt="Cerveja 2">
+            <p class="preco">R$ 9,00</p>
+            <label><input type="checkbox" value="cerveja_1"> Tipo 1</label>
+            <label><input type="checkbox" value="cerveja_2"> Tipo 2</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Suco Natural</h2>
+            <img src="imagem/suco.jpeg" alt="Suco Natural">
+            <p class="preco">R$ 7,00</p>
+            <label><input type="checkbox" value="suco"> Selecionar</label>
+        </div>
+    </div>
+    </div>
+    <h1>Pedido Finalizado!</h1>
+    <p>Obrigado por escolher nossa Hamburgueria.</p>
+    <p>Seu pedido foi registrado com sucesso.</p>
+
+
+</body>
+<footer>
+    <button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+</footer>
+
+<script>
+    function finalizarPedido() {
+
+        let lanche = "X-Tudo";
+        let opcao = document.querySelector('input[value="duplo"]').checked ? "Duplo" : "Tradicional";
+        window.location.href = "pedidos.html?lanche=" + encodeURIComponent(lanche) + "&opcao=" + encodeURIComponent(opcao);
+    }
+</script>
+
+
+</footer>
+
+
+
+</html>
+</body>
+
+
+
+</html>
+
+</html>
+</body>
+
+
+
+</html>
+
+
+</html>
+
+</html>
+</body>
+
+
+
+</html>
+
+</html>

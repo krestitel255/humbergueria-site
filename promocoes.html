@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promoções - Hamburgueria</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJNKKWVK');
+    </script>
+
+</head>
+
+<body bgcolor="#FF6000">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="fotos.html">Galeria</a></li>
+            <li><a href="links.html">Links Externos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="promocoes.html">Promoções</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="sobremesas.html">Sobremesas</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Promoções Especiais</h1>
+
+    <div class="galeria">
+
+        <div class="lanche">
+            <h2>Combo Individual</h2>
+            <p>1 lanche de preferência + Batata Frita</p>
+            <label><input type="checkbox" value="X-Bacon"> X-Bacon</label><br>
+            <label><input type="checkbox" value="X-Frango"> X-Frango</label><br>
+            <label><input type="checkbox" value="X-Tudo"> X-Tudo</label><br>
+            <label><input type="checkbox" value="Crispy"> Crispy com Queijo</label><br>
+        </div>
+
+
+        <div class="lanche">
+            <h2>Combo Casal</h2>
+            <p>2 lanches de preferência + Batata Frita + Sorvete de Chocolate</p>
+            <label><input type="checkbox" value="X-Bacon"> X-Bacon</label><br>
+            <label><input type="checkbox" value="X-Frango"> X-Frango</label><br>
+            <label><input type="checkbox" value="X-Tudo"> X-Tudo</label><br>
+            <label><input type="checkbox" value="Crispy"> Crispy com Queijo</label><br>
+        </div>
+    </div>
+
+
+    <footer>
+
+        <button class="finalizar" onclick="finalizarPromocao()">Finalizar Pedido</button>
+    </footer>
+
+    <script>
+        function finalizarPromocao() {
+            let selecionados = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(item => {
+                selecionados.push(item.value);
+            });
+
+
+            if (selecionados.length > 0) {
+                selecionados.push("Batata Frita");
+                if (selecionados.length > 1) {
+                    selecionados.push("Sorvete de Chocolate");
+                }
+            }
+
+
+            window.location.href = "pedidos.html?promocoes=" + encodeURIComponent(selecionados.join(", "));
+        }
+    </script>
+
+    <h2>Tabela de Combos e Preços</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Combo</th>
+                <th>Itens Inclusos</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Combo Individual</td>
+                <td>1 Lanche + Batata Frita</td>
+                <td>R$ 20,00</td>
+            </tr>
+            <tr>
+                <td>Combo Casal</td>
+                <td>2 Lanches + Batata Frita + Sorvete de Chocolate</td>
+                <td>R$ 45,00</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

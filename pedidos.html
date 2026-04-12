@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos - Hamburgueria</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJNKKWVK');
+    </script>
+
+</head>
+
+<body bgcolor="#FF6000">
+
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="fotos.html">Galeria</a></li>
+            <li><a href="links.html">Links Externos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="promocoes.html">Promoções</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="sobremesas.html">Sobremesas</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Resumo do Pedido</h1>
+    <div class="recibo">
+        <h2>Itens Selecionados:</h2>
+        <ul id="detalhes"></ul>
+        <p class="total">Obrigado por escolher nossa Hamburgueria!</p>
+    </div>
+
+
+    <script>
+        function getParametro(nome) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nome);
+        }
+
+        let lanche = getParametro("lanche");
+        let opcao = getParametro("opcao");
+        let porcoes = getParametro("porcoes");
+        let sobremesas = getParametro("sobremesas");
+        let promocoes = getParametro("promocoes");
+
+        let lista = document.getElementById("detalhes");
+
+        if (lanche && opcao) {
+            let li = document.createElement("li");
+            li.textContent = "Lanche: " + lanche + " (" + opcao + ")";
+            lista.appendChild(li);
+        }
+        if (porcoes) {
+            let li = document.createElement("li");
+            li.textContent = "Porções: " + porcoes;
+            lista.appendChild(li);
+        }
+        if (sobremesas) {
+            let li = document.createElement("li");
+
+            let nomes = sobremesas.replace("sorvete_chocolate", "Sorvete de Chocolate")
+                .replace("sorvete_morango", "Sorvete de Morango");
+            li.textContent = "Sobremesas: " + nomes;
+            lista.appendChild(li);
+        }
+        if (promocoes) {
+            let li = document.createElement("li");
+            li.textContent = "Promoções: " + promocoes;
+            lista.appendChild(li);
+        }
+
+        if (lista.children.length === 0) {
+            let li = document.createElement("li");
+            li.textContent = "Nenhum pedido selecionado.";
+            lista.appendChild(li);
+        }
+    </script>
+
+</body>
+
+</html>

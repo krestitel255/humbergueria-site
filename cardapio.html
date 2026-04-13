@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>cardapio - Hamburueria</title>
-    <meta name="google-site-verification" content="aftIrLznKBvkHFyfv_o913Uxbw-jnNu50B7h2VpqP1c" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Hamburgueria</title>
     <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -23,14 +25,25 @@
         })(window, document, 'script', 'dataLayer', 'GTM-NJNKKWVK');
     </script>
 
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW1584C9BC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-PW1584C9BC');
+    </script>
 </head>
 
 <body bgcolor="#FF6000">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
     <nav>
         <ul>
@@ -47,12 +60,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </nav>
 
-    <br>
     <h1>Lanches ARTESANAIS</h1>
-    <h1> Bem vindo ao nosso Cardapio</h1>
-    <img src="imagem/capa.png" width="300" height="250" alt="Capa do cardapio">
-    <p>Lanches do cardapio 01</p>
-    <h2>lanche 1</h2>
+    <h1>Bem-vindo ao nosso Cardápio</h1>
+    <img src="imagem/capa.png" width="300" height="250" alt="Capa do cardápio">
 
     <div class="galeria">
         <div class="lanche">
@@ -60,8 +70,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="imagem/xbacon.jpeg" alt="X-Bacon">
             <p class="preco">R$ 15,00</p>
             <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon extra</p>
-            <label><input type="checkbox" value="tradicional"> Tradicional</label>
-            <label><input type="checkbox" value="duplo"> Duplo</label>
+            <label><input type="radio" name="lanche" value="X-Bacon"> Selecionar</label>
         </div>
 
         <div class="lanche">
@@ -69,110 +78,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="imagem/xfrango.jpeg" alt="X-Frango">
             <p class="preco">R$ 12,00</p>
             <p>Ingredientes: pão, frango, queijo, alface, tomate</p>
-            <label><input type="checkbox" value="tradicional"> Tradicional</label>
-            <label><input type="checkbox" value="duplo"> Duplo</label>
+            <label><input type="radio" name="lanche" value="X-Frango"> Selecionar</label>
         </div>
-    </div>
 
-    <br>
-    <div class="galeria">
         <div class="lanche">
-            <h2>X-TUDO</h2>
-            <img src="imagem/xtudo.jpeg" alt="X-TUDO">
+            <h2>X-Tudo</h2>
+            <img src="imagem/xtudo.jpeg" alt="X-Tudo">
             <p class="preco">R$ 15,00</p>
-            <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon extra,ovo, salsicha</p>
-            <label><input type="checkbox" value="tradicional"> Tradicional</label>
-            <label><input type="checkbox" value="duplo"> Duplo</label>
-        </div>
-
-        <div class="lanche">
-            <h2>crispy com queijo</h2>
-            <img src="imagem/crispy.jpeg" alt="Crispy">
-            <p class="preco">R$ 12,00</p>
-            <p>Ingredientes: pão, frango, queijo, alface,cebola crispy, rodela de cebola roxa e queijo cheddar</p>
-            <label><input type="checkbox" value="tradicional"> Tradicional</label>
-            <label><input type="checkbox" value="duplo"> Duplo</label>
-        </div>
-
-        <div class="lanche">
-            <h2>Coca-Cola Lata</h2>
-            <img src="imagem/cocalata.jpeg" alt="Coca-Cola Lata">
-            <p class="preco">R$ 6,00</p>
-            <label><input type="checkbox" value="coca_lata_normal"> Normal</label>
-            <label><input type="checkbox" value="coca_lata_zero"> Zero</label>
-        </div>
-
-        <div class="lanche">
-            <h2>Coca-Cola Garrafa</h2>
-            <img src="imagem/coca.jpeg" alt="Coca-Cola Garrafa">
-            <p class="preco">R$ 8,00</p>
-            <label><input type="checkbox" value="coca_garrafa_normal"> Normal</label>
-            <label><input type="checkbox" value="coca_garrafa_zero"> Zero</label>
-        </div>
-
-        <div class="lanche">
-            <h2>Cerveja</h2>
-            <img src="imagem/cerveja.jpeg" alt="Cerveja">
-            <img src="imagem/cerveja2.jpeg" alt="Cerveja 2">
-            <p class="preco">R$ 9,00</p>
-            <label><input type="checkbox" value="cerveja_1"> Tipo 1</label>
-            <label><input type="checkbox" value="cerveja_2"> Tipo 2</label>
-        </div>
-
-        <div class="lanche">
-            <h2>Suco Natural</h2>
-            <img src="imagem/suco.jpeg" alt="Suco Natural">
-            <p class="preco">R$ 7,00</p>
-            <label><input type="checkbox" value="suco"> Selecionar</label>
+            <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon extra, ovo, salsicha</p>
+            <label><input type="radio" name="lanche" value="X-Tudo"> Selecionar</label>
         </div>
     </div>
-    </div>
-    <h1>Pedido Finalizado!</h1>
-    <p>Obrigado por escolher nossa Hamburgueria.</p>
-    <p>Seu pedido foi registrado com sucesso.</p>
 
+    <h2>Resumo do Pedido</h2>
+    <p id="resumo">Nenhum lanche selecionado.</p>
 
-</body>
-<footer>
     <button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
-</footer>
 
-<script>
-    function finalizarPedido() {
+    <script>
+        function finalizarPedido() {
+            const selecionado = document.querySelector('input[name="lanche"]:checked');
+            if (selecionado) {
+                document.getElementById("resumo").innerText = "Você pediu: " + selecionado.value;
+            } else {
+                document.getElementById("resumo").innerText = "Nenhum lanche selecionado.";
+            }
+        }
+    </script>
 
-        let lanche = "X-Tudo";
-        let opcao = document.querySelector('input[value="duplo"]').checked ? "Duplo" : "Tradicional";
-        window.location.href = "pedidos.html?lanche=" + encodeURIComponent(lanche) + "&opcao=" + encodeURIComponent(opcao);
-    }
-</script>
-
-
-</footer>
-
-
-
-</html>
+    <footer>
+        <p>Desenvolvido por João--RA:5157726>
+        </p>
+    </footer>
 </body>
-
-
-
-</html>
-
-</html>
-</body>
-
-
-
-</html>
-
-
-</html>
-
-</html>
-</body>
-
-
-
-</html>
 
 </html>

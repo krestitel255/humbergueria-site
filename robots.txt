@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://krestitel255.github.io/humbergueria-site/sitemap.xml
+Disallow: /admin/
+Sitemap: https://seuusuario.github.io/seuprojeto/sitemap.xml

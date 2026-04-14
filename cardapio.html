@@ -41,10 +41,11 @@
 <body bgcolor="#FF6000">
 
     <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJNKKWVK"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
+    <!-- Menu de navegação -->
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -60,17 +61,21 @@
         </ul>
     </nav>
 
-    <h1>Lanches ARTESANAIS</h1>
-    <h1>Bem-vindo ao nosso Cardápio</h1>
-    <img src="imagem/capa.png" width="300" height="250" alt="Capa do cardápio">
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Cardápio Artesanal</h1>
+        <p>Confira nossas delícias artesanais!</p>
+        <img src="imagem/capa.png" alt="capa do cardapio">
+    </header>
 
-    <div class="galeria">
+    <!-- Lanches -->
+    <section class="galeria">
         <div class="lanche">
             <h2>X-Bacon</h2>
             <img src="imagem/xbacon.jpeg" alt="X-Bacon">
             <p class="preco">R$ 15,00</p>
             <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon extra</p>
-            <label><input type="radio" name="lanche" value="X-Bacon"> Selecionar</label>
+            <label><input type="radio" name="item" value="X-Bacon"> Selecionar</label>
         </div>
 
         <div class="lanche">
@@ -78,7 +83,7 @@
             <img src="imagem/xfrango.jpeg" alt="X-Frango">
             <p class="preco">R$ 12,00</p>
             <p>Ingredientes: pão, frango, queijo, alface, tomate</p>
-            <label><input type="radio" name="lanche" value="X-Frango"> Selecionar</label>
+            <label><input type="radio" name="item" value="X-Frango"> Selecionar</label>
         </div>
 
         <div class="lanche">
@@ -86,22 +91,63 @@
             <img src="imagem/xtudo.jpeg" alt="X-Tudo">
             <p class="preco">R$ 16,00</p>
             <p>Ingredientes: pão, hambúrguer, queijo, alface, tomate, bacon, ovo, salsicha</p>
-            <label><input type="radio" name="lanche" value="X-Tudo"> Selecionar</label>
+            <label><input type="radio" name="item" value="X-Tudo"> Selecionar</label>
         </div>
-    </div>
 
-    <h2>Resumo do Pedido</h2>
-    <p id="resumo">Nenhum lanche selecionado.</p>
+        <div class="lanche">
+            <h2>Crispy com Queijo</h2>
+            <img src="imagem/crispy.jpeg" alt="Crispy com Queijo">
+            <p class="preco">R$ 12,00</p>
+            <p>Ingredientes: pão, frango, queijo, alface, cebola crispy, cebola roxa, cheddar</p>
+            <label><input type="radio" name="item" value="Crispy com Queijo"> Selecionar</label>
+        </div>
+    </section>
 
-    <button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+    <!-- Bebidas -->
+    <section class="galeria">
+        <div class="lanche">
+            <h2>Coca-Cola Lata</h2>
+            <img src="imagem/cocalata.jpeg" alt="Coca-Cola Lata">
+            <p class="preco">R$ 6,00</p>
+            <label><input type="radio" name="item" value="Coca-Cola Lata"> Selecionar</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Coca-Cola Garrafa</h2>
+            <img src="imagem/coca.jpeg" alt="Coca-Cola Garrafa">
+            <p class="preco">R$ 8,00</p>
+            <label><input type="radio" name="item" value="Coca-Cola Garrafa"> Selecionar</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Cerveja</h2>
+            <img src="imagem/cerveja.jpeg" alt="Cerveja">
+            <p class="preco">R$ 9,00</p>
+            <label><input type="radio" name="item" value="Cerveja"> Selecionar</label>
+        </div>
+
+        <div class="lanche">
+            <h2>Suco Natural</h2>
+            <img src="imagem/suco.jpeg" alt="Suco Natural">
+            <p class="preco">R$ 7,00</p>
+            <label><input type="radio" name="item" value="Suco Natural"> Selecionar</label>
+        </div>
+    </section>
+
+    <!-- Resumo do Pedido -->
+    <section class="pedido">
+        <h2>Resumo do Pedido</h2>
+        <p id="resumo">Nenhum item selecionado.</p>
+        <button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+    </section>
 
     <script>
         function finalizarPedido() {
-            const selecionado = document.querySelector('input[name="lanche"]:checked');
+            const selecionado = document.querySelector('input[name="item"]:checked');
             if (selecionado) {
                 document.getElementById("resumo").innerText = "Você pediu: " + selecionado.value;
             } else {
-                document.getElementById("resumo").innerText = "Nenhum lanche selecionado.";
+                document.getElementById("resumo").innerText = "Nenhum item selecionado.";
             }
         }
     </script>
